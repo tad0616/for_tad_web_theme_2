@@ -1,0 +1,68 @@
+body {
+  font-family: "Microsoft JhengHei UI",sans-serif;
+}
+
+h1,h2,h3{
+  text-shadow: 1px 1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF,1px 0px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 0px 1px 0 #FFFFFF;
+}
+
+#container{
+  margin-top: 50px;
+}
+
+.web_side_block .btn, .web_center_block .btn, .web_center_block .fc-event, .web_center_block .active>a{
+  color: white;
+}
+.web_side_block .btn:hover, .web_center_block .btn:hover ,.web_center_block .fc-event{
+  color: white;
+}
+
+.list-group a, .list-group-item a, .well a,.web_side_block .btn-default,.web_center_block .btn-default{
+  color: #333;
+}
+.list-group a:hover, .list-group-item a:hover, .well a:hover ,.web_side_block a.btn-default:hover,.web_center_block a.btn-default:hover{
+  color: #DB0A4C;
+}
+
+/*
+320 x 480 – Smartphone
+480 x 320 – Smartphone in landscape orientation
+768 x 1024 – iPad
+1024 x 768 – iPad in landscape orientation / netbook
+*/
+@media (max-width: 1280px){
+  #container{
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 1024px){
+  #container{
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 991px){
+  #container{
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 640px){
+  #container{
+    margin-top: 0px;
+  }
+
+}
+
+@media (max-width: 480px){
+  #container{
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 320px){
+  #container{
+    margin-top: 0px;
+  }
+}
