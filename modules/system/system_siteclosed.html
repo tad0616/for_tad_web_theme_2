@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="<{$xoops_langcode}>">
+  <head>
+    <!--目前$_SESSION['bootstrap']="<{php}>echo $_SESSION['bootstrap'];<{/php}>"; -->
+    <!--將目前的資料夾名稱，設定為樣板標籤變數 theme_name-->
+    <{assign var=theme_name value=$xoTheme->folderName}>
+    <{assign var=bootstrap value=3}>
+
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/meta.html"}>
+    <!-- 網站的標題及標語 -->
+    <title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+
+    <{$module_css}>
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/link_css.html"}>
+
+    <link href="<{$xoops_url}>/modules/tad_web/module.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="<{$xoops_url}>/modules/tadtools/css/iconize.css" rel="stylesheet" media="screen" type="text/css" />
+    <link rel="stylesheet" type="text/css" media="all"  href="<{xoImgUrl css/style.css}>" />
+
+    <!-- 給模組套用的樣板標籤 -->
+    <{$xoops_module_header}>
+    <script src="<{$xoops_url}>/browse.php?Frameworks/jquery/jquery.js" type="text/javascript"></script>
+    <script src="<{$xoops_url}>/modules/tadtools/jquery/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="<{$xoops_url}>/modules/tadtools/jquery/ui/jquery-ui.js" type="text/javascript"></script>
+    <script src="<{$xoops_url}>/modules/tadtools/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
+
+    <style>
+      <{if $theme_display_mode!="blank"}>
+        body{
+          <{if $bg_color}>background-color: <{$bg_color}>;<{/if}>
+          <{if $web_bg}>background-image: url('<{$xoops_url}>/uploads/tad_web/<{$WebID}>/bg/<{$web_bg}>');<{/if}>
+          <{if $bg_repeat}>background-repeat: <{$bg_repeat}>;<{/if}>
+          <{if $bg_attachment}>background-attachment: <{$bg_attachment}>;<{/if}>
+          <{if $bg_postiton}>background-position: <{$bg_postiton}>;<{/if}>
+          <{if $bg_size}>background-size: <{$bg_size}>;<{/if}>
+        }
+      <{else}>
+        body{
+          font-family: "Microsoft JhengHei UI";
+        }
+      <{/if}>
+      .sf-menu a{
+        color: <{$navbar_color}>;
+      }
+      .sf-menu a:hover{
+        color: <{$navbar_color_hover}>;
+      }
+
+      .sf-menu{
+        width: 100%;
+        float: none;
+      }
+      .sf-menu, .sf-menu * {
+        font-size: <{$menu_font_size}>px;
+      }
+
+
+      #tad_sf_menu{
+        background-color: <{$navbar_bg_top}>;
+        z-index:197;
+      }
+
+      .web_center_block {
+        color: <{$center_text_color}> ;
+      }
+
+      .web_center_block a{
+        color: <{$center_link_color}> ;
+      }
+
+      .web_center_block a:hover{
+        color: <{$center_hover_color}> ;
+      }
+
+      .web_center_block h1,.web_center_block h2,.web_center_block h3{
+        color: <{$center_header_color}>;
+        text-shadow: 1px 1px 0 <{$center_border_color}>, -1px -1px 0 <{$center_border_color}>, 1px -1px 0 <{$center_border_color}>, -1px 1px 0 <{$center_border_color}>,1px 0px 0 <{$center_border_color}>, -1px 0px 0 <{$center_border_color}>, 0px -1px 0 <{$center_border_color}>, 0px 1px 0 <{$center_border_color}>;
+      }
+
+      .web_side_block {
+        color: <{$side_text_color}> ;
+      }
+
+      .web_side_block a{
+        color: <{$side_link_color}> ;
+      }
+
+      .web_side_block a:hover{
+        color: <{$side_hover_color}> ;
+      }
+
+      .web_side_block h1,.#web_side_block h2,.web_side_block h3{
+        color: <{$side_header_color}>;
+        text-shadow: 1px 1px 0 <{$side_border_color}>, -1px -1px 0 <{$side_border_color}>, 1px -1px 0 <{$side_border_color}>, -1px 1px 0 <{$side_border_color}>,1px 0px 0 <{$side_border_color}>, -1px 0px 0 <{$side_border_color}>, 0px -1px 0 <{$side_border_color}>, 0px 1px 0 <{$side_border_color}>;
+      }
+
+      .list-group, .list-group-item, .well{
+        background: transparent url('<{xoImgUrl images/tran50.png}>');
+      }
+
+    </style>
+    <{if $_IS_EZCLASS}>
+      <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61272-4', 'auto');
+      ga('send', 'pageview');
+
+      </script>
+    <{/if}>
+  </head>
+
+  <body>
+
+    <{php}>
+    $_SESSION['bootstrap']=3;
+    <{/php}>
+
+    <!--載入布局 -->
+    <div class="jumbotron">
+        <h1 class="text-center"><{$lang_siteclosemsg}></h1>
+    </div>
+
+    <!-- 載入bootstrap -->
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/bootstrap_js.html"}>
+
+    <!-- 載入自訂js -->
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/my_js.html"}>
+
+    <script type="text/javascript" src="<{xoAppUrl /modules/tadtools/jquery.pin/jquery.pin.js}>"></script>
+    <script type='text/javascript'>
+      $(document).ready(function(){
+        $('#tad_sf_menu').pin();
+      });
+    </script>
+    <{$my_code}>
+    <!-- 顯示參數，開發用，開發完可刪除 -->
+    <{if $show_var=='1'}>
+      <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/show_var.html"}>
+    <{/if}>
+  </body>
+</html>
