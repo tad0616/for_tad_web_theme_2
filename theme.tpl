@@ -120,7 +120,7 @@
         <a name="top"></a>
         <div class="row" style="margin-top: 10px;">
           <div class="col-sm-12">
-            <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_header_b3.tpl"}>
+            <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_header_b3.html"}>
           </div>
         </div>
         <div class="row">
@@ -158,16 +158,16 @@
       </div>
     <{elseif $theme_display_mode=="blank"}>
       <{if $blank_kind=="content"}>
-        <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blank_b3.tpl"}>
+        <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blank_b3.html"}>
       <{else}>
-        <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_demo_b3.tpl"}>
+        <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_demo_b3.html"}>
       <{/if}>
     <{else}>
       <div class="container" id="container" style="background-color: <{$container_bg_color}>;">
         <a name="top"></a>
         <div class="row" style="margin-top: 10px;">
           <div class="col-sm-12">
-            <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_header_b3.tpl"}>
+            <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_header_b3.html"}>
           </div>
         </div>
 
@@ -204,23 +204,23 @@
         <div class="row">
           <{if $theme_side=="none"}>
             <div class="col-sm-12 web_center_block" id="web_center_block">
-              <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_center_b3.tpl"}>
+              <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_center_b3.html"}>
             </div>
           <{else}>
             <{if $theme_side=="left"}>
               <div class="col-sm-3 web_side_block" id="web_side_block">
                 <div <{if $side_bg_color!=$container_bg_color }>style="background: <{$side_bg_color}>; border-radius: 5px; padding: 20px 10px; margin-bottom: 20px;"<{/if}>>
-                <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_side_b3.tpl"}>
+                <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_side_b3.html"}>
                 </div>
               </div>
             <{/if}>
             <div class="col-sm-9 web_center_block" id="web_center_block">
-                <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_center_b3.tpl"}>
+                <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_center_b3.html"}>
             </div>
             <{if $theme_side=="right"}>
               <div class="col-sm-3 web_side_block" id="web_side_block">
                 <div <{if $side_bg_color!=$container_bg_color}>style="background: <{$side_bg_color}>; border-radius: 5px; padding: 20px 10px; margin-bottom: 20px;"<{/if}>>
-                  <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_side_b3.tpl"}>
+                  <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_side_b3.html"}>
                 </div>
               </div>
             <{/if}>
