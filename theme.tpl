@@ -14,7 +14,6 @@
         <{$module_css}>
         <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/link_css.tpl"}>
 
-        <link href="<{$xoops_url}>/modules/tad_web/module.css" media="screen" rel="stylesheet" type="text/css" />
         <link href="<{$xoops_url}>/modules/tadtools/css/iconize.css" rel="stylesheet" media="screen" type="text/css" />
         <link rel="stylesheet" type="text/css" media="all"  href="<{xoImgUrl css/style.css}>" />
 
@@ -147,6 +146,7 @@
         <{/php}>
 
         <{if $web_display_mode=="no"}>
+            <h3 class="sr-onlu">Site closed</h3>
             <div class="container" id="container" style="background-color: <{$container_bg_color}>;">
                 <a name="top">&nbsp;</a>
                 <div style="margin-top: 10px;">
@@ -231,10 +231,10 @@
         <!-- 載入自訂js -->
         <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/my_js.tpl"}>
 
-        <script type="text/javascript" src="<{xoAppUrl /modules/tadtools/jquery.pin/jquery.pin.js}>"></script>
+        <script type="text/javascript" src="<{xoAppUrl /modules/tadtools/jquery.sticky/jquery.sticky.js}>"></script>
         <script type='text/javascript'>
             $(document).ready(function(){
-                $('#tad_sf_menu').pin();
+                $('#tad_sf_menu').sticky({topSpacing:0 , zIndex: 100});
             });
         </script>
         <{$my_code}>
