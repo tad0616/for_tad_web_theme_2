@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="<{$xoops_langcode}>">
     <head>
-        <!--目前$_SESSION['bootstrap']="<{php}>echo $_SESSION['bootstrap'];<{/php}>"; -->
+        <!--目前$_SESSION['bootstrap']="<{$smarty.session.bootstrap}>"; -->
         <!--將目前的資料夾名稱，設定為樣板標籤變數 theme_name-->
         <{assign var=theme_name value=$xoTheme->folderName}>
         <!--目前佈景=<{$theme_name}> -->
         <{assign var=bootstrap value=4}>
 
-        <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/meta.tpl"}>
+        <{include file="$xoops_rootpath/modules/tadtools/themes_common/meta.tpl"}>
         <!-- 網站的標題及標語 -->
         <title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
 
         <{$module_css}>
-        <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/link_css.tpl"}>
+        <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/link_css.tpl"}>
 
         <link href="<{$xoops_url}>/modules/tadtools/css/iconize.css" rel="stylesheet" media="screen" type="text/css" />
-        <link rel="stylesheet" type="text/css" media="all"  href="<{xoImgUrl css/style.css}>" />
+        <link rel="stylesheet" type="text/css" media="all"  href="<{$xoops_imageurl}>/css/style.css" />
 
         <!-- 給模組套用的樣板標籤 -->
         <{$xoops_module_header}>
@@ -98,7 +98,7 @@
             }
 
             .list-group, .list-group-item, .well{
-                background: transparent url('<{xoImgUrl images/tran50.png}>');
+                background: transparent url('<{$xoops_imageurl}>/images/tran50.png');
             }
 
             .sf-menu a{
@@ -150,59 +150,59 @@
             <div class="container" id="container" style="background-color: <{$container_bg_color}>;">
                 <a name="top">&nbsp;</a>
                 <div style="margin-top: 10px;">
-                    <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_header.tpl"}>
+                    <{include file="$xoops_rootpath/modules/tad_web/templates/tad_web_header.tpl"}>
                 </div>
 
                 <div class="row">
-                    <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/menu/superfish/menu.tpl"}>
+                    <{include file="$xoops_rootpath/modules/tadtools/themes_common/menu/superfish/menu.tpl"}>
 
                     <div class="col-sm-12 text-center" id="web_center_block">
                         <a href="index.php">
-                            <img src="<{xoAppUrl modules/tad_web/images/site_close.png}>" alt="The web does not exist!">
+                            <img src="<{$xoops_url}>/modules/tad_web/images/site_close.png" alt="The web does not exist!">
                         </a>
                     </div>
                 </div>
             </div>
         <{elseif $theme_display_mode=="blank"}>
             <{if $blank_kind=="content"}>
-                <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blank.tpl"}>
+                <{include file="$xoops_rootpath/modules/tad_web/templates/tad_web_blank.tpl"}>
             <{else}>
-                <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_demo.tpl"}>
+                <{include file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_demo.tpl"}>
             <{/if}>
         <{else}>
             <div class="container" id="container" style="background-color: <{$container_bg_color}>;">
                 <a name="top">&nbsp;</a>
                 <div  style="margin-top: 10px;">
-                    <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_header.tpl"}>
+                    <{include file="$xoops_rootpath/modules/tad_web/templates/tad_web_header.tpl"}>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/menu/superfish/menu.tpl"}>
+                        <{include file="$xoops_rootpath/modules/tadtools/themes_common/menu/superfish/menu.tpl"}>
                     </div>
                 </div>
 
                 <{if $theme_side=="none"}>
                     <div class="web_center_block" id="web_center_block">
-                        <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_center.tpl"}>
+                        <{include file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_center.tpl"}>
                     </div>
                 <{else}>
                     <div class="row">
                         <{if $theme_side=="left"}>
                             <div class="col-sm-3 web_side_block" id="web_side_block">
                                 <div <{if $side_bg_color!=$container_bg_color }>style="background: <{$side_bg_color}>; border-radius: 5px; padding: 20px 10px; margin-bottom: 20px;"<{/if}>>
-                                <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_side.tpl"}>
+                                <{include file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_side.tpl"}>
                                 </div>
                             </div>
                         <{/if}>
 
                         <div class="col-sm-9 web_center_block" id="web_center_block">
-                            <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_center.tpl"}>
+                            <{include file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_center.tpl"}>
                         </div>
 
                         <{if $theme_side=="right"}>
                             <div class="col-sm-3 web_side_block" id="web_side_block">
                                 <div <{if $side_bg_color!=$container_bg_color}>style="background: <{$side_bg_color}>; border-radius: 5px; padding: 20px 10px; margin-bottom: 20px;"<{/if}>>
-                                <{includeq file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_side.tpl"}>
+                                <{include file="$xoops_rootpath/modules/tad_web/templates/tad_web_blocks_side.tpl"}>
                                 </div>
                             </div>
                         <{/if}>
@@ -226,12 +226,12 @@
         <{/if}>
 
         <!-- 載入bootstrap -->
-        <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/bootstrap_js.tpl"}>
+        <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/bootstrap_js.tpl"}>
 
         <!-- 載入自訂js -->
-        <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/my_js.tpl"}>
+        <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/my_js.tpl"}>
 
-        <script type="text/javascript" src="<{xoAppUrl /modules/tadtools/jquery.sticky/jquery.sticky.js}>"></script>
+        <script type="text/javascript" src="<{$xoops_url}>//modules/tadtools/jquery.sticky/jquery.sticky.js"></script>
         <script type='text/javascript'>
             $(document).ready(function(){
                 $('#tad_sf_menu').sticky({topSpacing:0 , zIndex: 100});
@@ -240,7 +240,7 @@
         <{$my_code}>
         <!-- 顯示參數，開發用，開發完可刪除 -->
         <{if $show_var=='1'}>
-            <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/show_var.tpl"}>
+            <{include file="$xoops_rootpath/modules/tadtools/themes_common/show_var.tpl"}>
         <{/if}>
     </body>
 </html>
