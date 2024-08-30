@@ -3,9 +3,9 @@
     <head>
         <!--目前$_SESSION['bootstrap']="<{$smarty.session.bootstrap}>"; -->
         <!--將目前的資料夾名稱，設定為樣板標籤變數 theme_name-->
-        <{assign var=theme_name value=$xoTheme->folderName}>
+        <{assign var="theme_name" value=$xoTheme->folderName}>
         <!--目前佈景=<{$theme_name}> -->
-        <{assign var=bootstrap value=4}>
+        <{assign var="bootstrap" value=4}>
 
         <{include file="$xoops_rootpath/modules/tadtools/themes_common/meta.tpl"}>
         <!-- 網站的標題及標語 -->
@@ -141,9 +141,6 @@
     </head>
 
     <body>
-        <{php}>
-        $_SESSION['bootstrap']=4;
-        <{/php}>
 
         <{if $web_display_mode=="no"}>
             <h3 class="sr-onlu">Site closed</h3>
