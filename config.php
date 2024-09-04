@@ -3,16 +3,16 @@
 $theme_change = 0;
 
 //預設佈景種類 bootstrap3 , html , mix
-$theme_kind = 'bootstrap4';
+$theme_kind = 'bootstrap5';
 
 //可選用佈景種類 bootstrap3 , html , mix （$theme_change=1 時才有用）
-$theme_kind_arr = 'bootstrap4';
+$theme_kind_arr = 'bootstrap5';
 
 //引入哪些選單？ all(含 my_menu,admin,user),my_menu,admin,user
 $menu_var_kind = 'all';
 
 //額外顏色設定 如： bootstrap3/themes/light/Cerulean
-$theme_color = 'bootstrap4';
+$theme_color = 'bootstrap5';
 
 //是否為可選用佈景
 $theme_set_allowed = 0;
