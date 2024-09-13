@@ -1,27 +1,53 @@
 body {
-  font-family: "Microsoft JhengHei UI",sans-serif;
+  font-family: "Microsoft JhengHei UI", sans-serif;
 }
 
-h1,h2,h3{
-  text-shadow: 1px 1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF,1px 0px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 0px 1px 0 #FFFFFF;
+h1,
+h2,
+h3 {
+  text-shadow: 1px 1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 0px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 0px 1px 0 #FFFFFF;
 }
 
-#container{
+a {
+  text-decoration: none;
+}
+
+#container {
   margin-top: 50px;
 }
 
-.web_side_block .btn, .web_center_block .btn, .web_center_block .fc-event, .web_center_block .active>a{
-  color: white;
-}
-.web_side_block .btn:hover, .web_center_block .btn:hover ,.web_center_block .fc-event{
+.web_side_block .btn,
+.web_center_block .btn,
+.web_center_block .fc-event,
+.web_center_block .active>a {
   color: white;
 }
 
-.list-group a, .list-group-item a, .well a,.web_side_block .btn-default,.web_center_block .btn-default{
+.web_side_block .btn:hover,
+.web_center_block .btn:hover,
+.web_center_block .fc-event {
+  color: white;
+}
+
+.list-group a,
+.list-group-item a,
+.well a,
+.web_side_block .btn-default,
+.web_center_block .btn-default {
   color: #333;
 }
-.list-group a:hover, .list-group-item a:hover, .well a:hover ,.web_side_block a.btn-default:hover,.web_center_block a.btn-default:hover{
+
+.list-group a:hover,
+.list-group-item a:hover,
+.well a:hover,
+.web_side_block a.btn-default:hover,
+.web_center_block a.btn-default:hover {
   color: #DB0A4C;
+}
+
+.fc-event-title {
+  white-space: normal; /* 允許文字換行 */
+  overflow: visible;   /* 確保文字不會被截斷 */
 }
 
 /*
@@ -30,39 +56,45 @@ h1,h2,h3{
 768 x 1024 – iPad
 1024 x 768 – iPad in landscape orientation / netbook
 */
-@media (max-width: 1280px){
-  #container{
+@media (max-width: 1280px) {
+  #container {
     margin-top: 50px;
   }
 }
 
-@media (max-width: 1024px){
-  #container{
+@media (max-width: 1024px) {
+  #container {
     margin-top: 50px;
   }
 }
 
-@media (max-width: 991px){
-  #container{
+@media (max-width: 991px) {
+  #container {
     margin-top: 50px;
   }
 }
 
-@media (max-width: 640px){
-  #container{
+@media (max-width: 640px) {
+  #container {
     margin-top: 0px;
   }
 
 }
 
-@media (max-width: 480px){
-  #container{
+@media (max-width: 480px) {
+  #container {
     margin-top: 0px;
   }
 }
 
-@media (max-width: 320px){
-  #container{
+@media (max-width: 320px) {
+  #container {
     margin-top: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  #container{
+      max-width: 1280px;
   }
 }

@@ -5,14 +5,14 @@
         <!--將目前的資料夾名稱，設定為樣板標籤變數 theme_name-->
         <{assign var="theme_name" value=$xoTheme->folderName}>
         <!--目前佈景=<{$theme_name}> -->
-        <{assign var="bootstrap" value=4}>
+        <{assign var="bootstrap" value=5}>
 
         <{include file="$xoops_rootpath/modules/tadtools/themes_common/meta.tpl"}>
         <!-- 網站的標題及標語 -->
         <title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
 
         <{$module_css}>
-        <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/link_css.tpl"}>
+        <{include file="$xoops_rootpath/modules/tadtools/themes5_tpl/link_css.tpl"}>
 
         <link href="<{$xoops_url}>/modules/tadtools/css/iconize.css" rel="stylesheet" media="screen" type="text/css" />
         <link rel="stylesheet" type="text/css" media="all"  href="<{$xoops_imageurl}>/css/style.css" />
@@ -141,11 +141,10 @@
     </head>
 
     <body>
-
         <{if $web_display_mode=="no"}>
             <h3 class="sr-onlu">Site closed</h3>
             <div class="container" id="container" style="background-color: <{$container_bg_color}>;">
-                <a name="top">&nbsp;</a>
+                <div name="top" style="height:1px;"></div>
                 <div style="margin-top: 10px;">
                     <{include file="$xoops_rootpath/modules/tad_web/templates/tad_web_header.tpl"}>
                 </div>
@@ -168,8 +167,8 @@
             <{/if}>
         <{else}>
             <div class="container" id="container" style="background-color: <{$container_bg_color}>;">
-                <a name="top">&nbsp;</a>
-                <div  style="margin-top: 10px;">
+                <div name="top" style="height:1px;"></div>
+                <div style="margin-top: 10px;">
                     <{include file="$xoops_rootpath/modules/tad_web/templates/tad_web_header.tpl"}>
                 </div>
                 <div class="row">
@@ -207,7 +206,7 @@
                 <{/if}>
             </div>
 
-            <div id="tad_web_footer" style="background: #000000; color: #fcfcfc; font-size: 0.8em; font-family: Arial, Tahoma, Helvetica, Comic Sans MS, Georgia; padding: 5px;">
+            <div id="tad_web_footer" style="background: #000000; color: #fcfcfc; font-size: 0.8em; font-family: Arial, Tahoma, Helvetica, Comic Sans MS, Georgia; padding: 5px; margin-top: 30px;">
 
                 <{if $_IS_EZCLASS}>
                 <div class="row">
@@ -223,10 +222,10 @@
         <{/if}>
 
         <!-- 載入bootstrap -->
-        <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/bootstrap_js.tpl"}>
+        <{include file="$xoops_rootpath/modules/tadtools/themes5_tpl/bootstrap_js.tpl"}>
 
         <!-- 載入自訂js -->
-        <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/my_js.tpl"}>
+        <{include file="$xoops_rootpath/modules/tadtools/themes5_tpl/my_js.tpl"}>
 
         <script type="text/javascript" src="<{$xoops_url}>//modules/tadtools/jquery.sticky/jquery.sticky.js"></script>
         <script type='text/javascript'>

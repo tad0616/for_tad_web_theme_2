@@ -13,6 +13,7 @@ $tad_web_config['side_hover_color'] = "#27608E";
 $tad_web_config['side_header_color'] = "#000000";
 $tad_web_config['side_border_color'] = "#ffffff";
 $tad_web_config['navbar_bg_top'] = "#e8fff9";
+$tad_web_config['navbar_bg_bottom'] = "#e8fff9";
 $tad_web_config['navbar_color'] = "#003f48";
 $tad_web_config['navbar_hover'] = "#709800";
 $tad_web_config['navbar_color_hover'] = "#ffffff";
