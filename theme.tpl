@@ -139,7 +139,7 @@
         <{/if}>
     </head>
 
-    <body>
+    <body  <{$prism_setup}>>
         <{if $web_display_mode=="no"}>
             <h3 class="sr-onlu">Site closed</h3>
             <div class="container" id="container" style="background-color: <{$container_bg_color|default:''}>;">
