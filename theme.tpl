@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="<{$xoops_langcode|default:''}>">
     <head>
-        <!--目前$_SESSION['bootstrap']="<{$smarty.session.bootstrap}>"; -->
+        <{assign var="bootstrap" value=$smarty.session.bootstrap|default:$session.bootstrap}>
+        <!--目前$_SESSION['bootstrap']="<{$bootstrap|default:''}>"; -->
         <!--將目前的資料夾名稱，設定為樣板標籤變數 theme_name-->
         <{assign var="theme_name" value=$xoTheme->folderName}>
         <!--目前佈景=<{$theme_name|default:''}> -->
@@ -139,7 +140,7 @@
         <{/if}>
     </head>
 
-    <body  <{$prism_setup}>>
+    <body <{$prism_setup|default:''}>>
         <{if $web_display_mode=="no"}>
             <h3 class="sr-onlu">Site closed</h3>
             <div class="container" id="container" style="background-color: <{$container_bg_color|default:''}>;">
