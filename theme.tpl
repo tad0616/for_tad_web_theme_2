@@ -26,7 +26,7 @@
                 font-family: "Microsoft JhengHei UI";
                 <{if $bg_color|default:false}>background-color: <{$bg_color|default:''}>;<{/if}>
                 <{if $web_bg|default:false}>
-                    <{if $web_bg|strpos:"bg_$WebID_" !== false}>
+                    <{if $web_bg|strpos:"bg_`$WebID`_" !== false}>
                         background-image: url('<{$xoops_url}>/uploads/tad_web/<{$WebID|default:''}>/bg/<{$web_bg|default:''}>');
                     <{else}>
                         background-image: url('<{$xoops_url}>/modules/tad_web/images/bg/<{$web_bg|default:''}>');
@@ -235,7 +235,7 @@
         </script>
         <{$my_code|default:''}>
         <!-- 顯示參數，開發用，開發完可刪除 -->
-        <{if $show_var=='1'}>
+        <{if $show_var|default:false}>
             <{include file="$xoops_rootpath/modules/tadtools/themes_common/show_var.tpl"}>
         <{/if}>
     </body>
